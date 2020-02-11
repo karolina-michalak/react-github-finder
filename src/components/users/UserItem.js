@@ -9,6 +9,7 @@ class UserItem extends Component {
   };
   render() {
     const { login, avatar_url, html_url } = this.state;
+
     return (
       <div className='card text-center'>
         <img src={avatar_url} className='round-img' style={{ width: '60px' }} />

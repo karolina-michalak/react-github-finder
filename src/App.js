@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './components/layouts/Navbar';
 import Users from './components/users/Users.js';
 import axios from 'axios';
+import Search from './components/layouts/Search.js';
 import './App.css';
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
     return (
       <div className='App'>
         <Navbar />
+        <Search />
         <div className='container'>
           <Users loading={this.state.loading} users={this.state.users} />
         </div>

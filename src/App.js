@@ -29,8 +29,8 @@ class App extends Component {
     return (
       <div className='App'>
         <Navbar />
-        <Search />
         <div className='container'>
+          <Search />
           <Users loading={this.state.loading} users={this.state.users} />
         </div>
       </div>

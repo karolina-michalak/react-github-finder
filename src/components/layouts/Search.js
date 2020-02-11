@@ -5,15 +5,9 @@ export class Search extends Component {
     text: ''
   };
 
-  //   onSubmit = e => {
-  //       e.preventDefault()
-  //       console.log(this.state.text)
-  //   }
-
-  onSubmit(e) {
+  onSubmit = e => {
     e.preventDefault();
-    console.log(this.state.text);
-  }
+  };
 
   onChange = e => {
     this.setState({
@@ -24,7 +18,7 @@ export class Search extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.onSubmit.bind(this)} className='form'>
+        <form onSubmit={this.onSubmit} className='form'>
           <input
             type='text'
             name='text'

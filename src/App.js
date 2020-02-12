@@ -38,7 +38,7 @@ class App extends Component {
     });
 
     const res = await axios.get(
-      `https://api.github.com/users/users/${username}?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}}`
+      `https://api.github.com/users/${username}?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}}`
     );
 
     this.setState({
@@ -86,7 +86,7 @@ class App extends Component {
                       searchUsers={this.searchUsers}
                       clearUsers={this.clearUsers}
                       showClear={users.length > 0 ? true : false}
-                      etAlert={this.setAlert}
+                      setAlert={this.setAlert}
                     />
                     <Users loading={loading} users={users} />
                   </Fragment>
@@ -95,7 +95,7 @@ class App extends Component {
               <Route exact path="/about" component={About} />
               <Route
                 exact
-                pach="/user/:login"
+                path="/user/:login"
                 render={props => (
                   <User 
                   {...props} 

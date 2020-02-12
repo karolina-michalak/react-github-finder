@@ -15,9 +15,7 @@ const [text, setText] = useState('')
   };
 
   const onChange = e => {
-    setText({
-      text: e.target.value
-    });
+    setText(e.target.value)
   };
 
   return (

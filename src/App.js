@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from "react";
+import React, { Fragment, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/layouts/Navbar";
 import Users from "./components/users/Users.js";
@@ -9,14 +9,12 @@ import Alert from "./components/layouts/Alert";
 import About from "./components/pages/About";
 import "./App.css";
 
-class App extends Component {
-  state = {
-    users: [],
-    user: {},
-    loading: false,
-    alert: null,
-    repos: []
-  };
+const App = () => {
+  const [users, setUsers] = useState([])
+  const [user, setUser] = useState({})
+  const [repos, serRepos] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [alert, setAlert] = useState(null)
 
   searchUsers = async text => {
     this.setState({

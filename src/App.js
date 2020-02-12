@@ -5,6 +5,7 @@ import Users from './components/users/Users.js';
 import axios from 'axios';
 import Search from './components/layouts/Search.js';
 import Alert from './components/layouts/Alert';
+import About from './components/pages/About'
 import './App.css';
 
 class App extends Component {
@@ -66,6 +67,7 @@ class App extends Component {
                   <Users loading={loading} users={users} />
                 </Fragment>
               )} />
+              <Route exact path='/about' component={About} />
             </Switch>
           </div>
         </div>
